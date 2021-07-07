@@ -18,4 +18,6 @@ const multi = (h, j) => {
     return h * j
 }
 
+let mul = (h, j) => h * j
+
 console.log(multi(9, 8));
