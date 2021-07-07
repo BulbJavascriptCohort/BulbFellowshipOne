@@ -3,11 +3,7 @@ function isPalindrome(word) {
     for (let index = 0; index < word.length; index++) {
         if (word[index] !== word[i]) 
             return false
-
-
         
-
-
         i--
     }
     return true

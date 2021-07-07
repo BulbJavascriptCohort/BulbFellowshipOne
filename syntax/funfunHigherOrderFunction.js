@@ -1,6 +1,10 @@
 // HOF
 // higher order functions
 
+const fs = require("fs")
+
+console.log(fs)
+
 function addition(a, b) {
     return a + b
 }
