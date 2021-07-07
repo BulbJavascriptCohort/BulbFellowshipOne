@@ -1,0 +1,24 @@
+{
+  "name": "npmplay",
+  "version": "1.0.0",
+  "description": "\"Learn you how to write your first bash script\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "diff": "^3.2.0",
+    "naija-state-local-government": "^1.1.2",
+    "paystack": "^2.0.1",
+    "workshopper-adventure": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "workshopper-adventure-test": "^1.1.1"
+  }
+}
