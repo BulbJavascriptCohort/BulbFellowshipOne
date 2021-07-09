@@ -33,6 +33,9 @@ const server = http.createServer((req, res) => {
 		case "/matthew":
 			serveHTML("/cohort2/matthew.html", res);
 			break;
+		case "/iyin":
+			serveHTML("/cohort2/iyin.html", res);
+			break ;
 		default:
 			res.writeHead(200, { "Content-Type": "text/plain" });
 			res.end(`Hello ${req.url}\n`);
