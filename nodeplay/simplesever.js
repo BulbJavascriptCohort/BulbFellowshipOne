@@ -24,20 +24,25 @@ function serveHTML(path, response){
 const server = http.createServer((req, res) => {
    // console.log( {req}, {res} )
    let requestUrl = req.url.toLowerCase()
-
-   if( requestUrl === "/fatimah" ){
-      serveHTML("/cohort2/fatimah.html", res)
-   }
-   else if( requestUrl === "/babatunde" ){
-      serveHTML("/cohort2/babatunde.html", res)
-   }
-   else{
-      // Set the response HTTP header with HTTP status and Content type
+   switch(requestUrl){
+      case "/fatimah" :
+         serveHTML("/cohort2/fatimah.html", res);
+         break ;
+         case "/babatunde" :
+            serveHTML("/cohort2/babatunde.html", res);
+            break ;
+            case "/iyin" :
+               serveHTML("/cohort2/iyin.html", res);
+               break ;
+            default :
+             // Set the response HTTP header with HTTP status and Content type
       res.writeHead(200, {'Content-Type': 'text/plain'});
 
       // Send the response body "Hello World"
-      res.end(`Hello ${req.url}\n`);    
-   }  
+      res.end(`Hello ${req.url}\n`);
+   }
+   
+  
 });
 
 // Prints a log once the server starts listening
