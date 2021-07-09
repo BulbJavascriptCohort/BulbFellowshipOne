@@ -32,6 +32,9 @@ const server = http.createServer((req, res) => {
 			break;
 		case "/matthew":
 			serveHTML("/cohort2/matthew.html", res);
+		default:
+			res.writeHead(200, { "Content-Type": "text/plain" });
+			res.end(`Hello ${req.url}\n`);
 	}
 	// if( requestUrl === "/fatimah" ){
 	//    serveHTML("/cohort2/fatimah.html", res)
