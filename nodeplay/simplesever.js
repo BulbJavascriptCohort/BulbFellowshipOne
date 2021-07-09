@@ -25,9 +25,15 @@ const server = http.createServer((req, res) => {
 	let requestUrl = req.url.toLowerCase();
 	switch (requestUrl) {
 		case "/fatimah":
+			// fatimah.html
+			serveHTML("/cohort2/fatimah.html", res);
+			break;
+		case "/Eben":
+			// Eben.html
 			serveHTML("/cohort2/fatimah.html", res);
 			break;
 		case "/babatunde":
+			// babatunde
 			serveHTML("/cohort2/babatunde.html", res);
 			break;
 		case "/matthew":
