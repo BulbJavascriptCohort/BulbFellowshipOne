@@ -1,15 +1,16 @@
 {
-  "name": "nodeplay",
-  "version": "1.0.0",
-  "description": "",
-  "main": "globalvariables.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^0.21.1",
-    "nodemon": "^2.0.9"
-  }
+	"name": "nodeplay",
+	"version": "1.0.0",
+	"description": "",
+	"main": "globalvariables.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "nodemon simplesever.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^0.21.1",
+		"nodemon": "^2.0.10"
+	}
 }

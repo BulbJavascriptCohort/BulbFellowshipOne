@@ -23,20 +23,36 @@ function serveHTML(path, response) {
 const server = http.createServer((req, res) => {
   // console.log( {req}, {res} )
   let requestUrl = req.url.toLowerCase();
-
-  if (requestUrl === "/fatimah") {
-    serveHTML("/cohort2/fatimah.html", res);
-  } else if (requestUrl === "/babatunde") {
-    serveHTML("/cohort2/babatunde.html", res);
-  } else if (requestUrl === "/rabo") {
-    serveHTML("/cohort2/rabo.html", res);
-  } else {
-    // Set the response HTTP header with HTTP status and Content type
-    res.writeHead(200, { "Content-Type": "text/plain" });
-
-    // Send the response body "Hello World"
-    res.end(`Hello ${req.url}\n`);
+  switch (requestUrl) {
+    case "/fatimah":
+      serveHTML("/cohort2/fatimah.html", res);
+      break;
+    case "/babatunde":
+      serveHTML("/cohort2/babatunde.html", res);
+      break;
+    case "/matthew":
+      serveHTML("/cohort2/matthew.html", res);
+      break;
+    case "/rabo":
+      serveHTML("/cohort2/rabo.html", res);
+      break;
+    default:
+      res.writeHead(200, { "Content-Type": "text/plain" });
+      res.end(`Hello ${req.url}\n`);
   }
+  // if( requestUrl === "/fatimah" ){
+  //    serveHTML("/cohort2/fatimah.html", res)
+  // }
+  // else if( requestUrl === "/babatunde" ){
+  //    serveHTML("/cohort2/babatunde.html", res)
+  // }
+  // else{
+  //    // Set the response HTTP header with HTTP status and Content type
+  //    res.writeHead(200, {'Content-Type': 'text/plain'});
+
+  //    // Send the response body "Hello World"
+  //    res.end(`Hello ${req.url}\n`);
+  // }
 });
 
 // Prints a log once the server starts listening
